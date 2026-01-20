@@ -1,0 +1,11 @@
+---
+---
+{% include_relative default.html %}
+{% capture post_content %}
+<article>
+  <h1>{{ page.title }}</h1>
+  <p class="meta">Published {{ page.date | date: "%Y-%m-%d" }} • {{ page.author }}</p>
+  {{ content }}
+</article>
+{% endcapture %}
+{{ post_content }}

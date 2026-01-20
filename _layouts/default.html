@@ -2,25 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>{{ page.title }} — {{ site.title }}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ page.title }} — {{ default: site.title }}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description }}">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
-  <header class="site-header">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header role="banner">
     <nav class="nav">
-      <a href="{{ '/' | relative_url }}">Home</a>
-      <a href="{{ '/about/' | relative_url }}">About</a>
-      <a href="{{ '/blog/' | relative_url }}">Blog</a>
+      <a href="{{ '/' | relative_url }}">{{ site.title }}</a> |
+      <a href="{{ '/blog/' | relative_url }}">Blog</a> |
       <a href="{{ '/contact/' | relative_url }}">Contact</a>
     </nav>
   </header>
 
-  <main class="content">
+  <main id="main-content" role="main">
     {{ content }}
   </main>
 
-  <footer class="site-footer">
+  <footer role="contentinfo">
     <p>&copy; {{ site.title }} — {{ "now" | date: "%Y" }}</p>
   </footer>
 </body>
