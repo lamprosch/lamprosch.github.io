@@ -1,0 +1,49 @@
+# Basic site settings
+title: "Lampros Ch"
+email: "you@example.com"
+description: "Music, audio research, portfolio and lessons by Lampros"
+baseurl: "" # leave empty for user.github.io sites
+url: "https://lamprosch.github.io" # your GitHub Pages URL
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins: [] # keep empty for GitHub Pages safe mode
+
+# Collections
+collections:
+  portfolio:
+    output: true
+  technical:
+    output: true
+
+# Defaults for posts and collections
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "portfolio"
+    values:
+      layout: "project"
+  - scope:
+      path: ""
+      type: "technical"
+    values:
+      layout: "technical"
+
+# Exclude from build (if any large files)
+exclude:
+  - README.md
+  - node_modules
+  - .github
+
+# Permalinks
+permalink: /:categories/:year/:month/:day/:title/
+
+# Author (used in templates)
+author:
+  name: "Lampros"
