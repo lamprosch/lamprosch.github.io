@@ -1,15 +1,12 @@
 ---
+layout: default
 ---
-{% include_relative default.html %}
-{% capture project_content %}
 <article class="project">
   <h1>{{ page.title }}</h1>
   <p class="meta">{{ page.date | date: "%Y-%m-%d" }} • {{ page.tags | join: ", " }}</p>
   {% if page.featured_image %}
-    <img src="{{ page.featured_image | relative_url }}" alt="{{ page.title }} featured image">
+    <img src="{{ page.featured_image | relative_url }}" alt="{{ page.featured_image_alt | default: page.title }}">
   {% endif %}
   <div class="excerpt">{{ page.excerpt }}</div>
   <div class="content">{{ content }}</div>
 </article>
-{% endcapture %}
-{{ project_content }}

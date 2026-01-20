@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>{{ page.title }} — {{ default: site.title }}</title>
+  <title>{{ page.title | default: site.title }}</title>
   <meta name="description" content="{{ page.excerpt | default: site.description }}">
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
   <header role="banner">
-    <nav class="nav">
+    <nav>
       <a href="{{ '/' | relative_url }}">{{ site.title }}</a> |
       <a href="{{ '/blog/' | relative_url }}">Blog</a> |
       <a href="{{ '/contact/' | relative_url }}">Contact</a>
@@ -22,7 +22,7 @@
   </main>
 
   <footer role="contentinfo">
-    <p>&copy; {{ site.title }} — {{ "now" | date: "%Y" }}</p>
+    <p>&copy; {{ site.author.name }} — {{ set.time | date: "%Y" }}</p>
   </footer>
 </body>
 </html>

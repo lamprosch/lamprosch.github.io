@@ -1,7 +1,6 @@
 ---
+layout: default
 ---
-{% include_relative default.html %}
-{% capture tech_content %}
 <article class="technical">
   <h1>{{ page.title }}</h1>
   <p class="meta">{{ page.date | date: "%Y-%m-%d" }} • {{ page.tags | join: ", " }}</p>
@@ -11,5 +10,3 @@
   <div class="excerpt">{{ page.excerpt }}</div>
   <div class="content">{{ content }}</div>
 </article>
-{% endcapture %}
-{{ tech_content }}
