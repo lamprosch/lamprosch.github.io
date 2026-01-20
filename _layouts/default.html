@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <header role="banner">
     <nav class="nav">
       <a href="{{ '/' | relative_url }}">{{ site.title }}</a> |
@@ -16,7 +17,7 @@
     </nav>
   </header>
 
-  <main role="main">
+  <main id="main-content" role="main">
     {{ content }}
   </main>
 
