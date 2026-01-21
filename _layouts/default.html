@@ -6,23 +6,72 @@
   <title>{{ page.title | default: site.title }}</title>
   <meta name="description" content="{{ page.excerpt | default: site.description }}">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
-  <header role="banner">
-    <nav class="navbar">
-      <a href="{{ '/' | relative_url }}">Home</a>
-      <a href="{{ '/portfolio/' | relative_url }}">Portfolio</a>
-      <a href="{{ '/technical/' | relative_url }}">Technical</a>
-      <a href="{{ '/lessons/' | relative_url }}">Lessons</a>
-      <a href="{{ '/blog/' | relative_url }}">Blog</a>
-      <a href="{{ '/contact/' | relative_url }}">Contact</a>
-    </nav>
-  </header>
 
-  <main id="main-content" role="main">
-    {{ content }}
-  </main>
+<div class="navbar-wrap">
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <a class="brand" href="/">Lampros Chantzis</a>
+    <a href="/portfolio/">Portfolio</a>
+    <a href="/technical/">Technical</a>
+    <a href="/lessons/">Lessons</a>
+    <a href="/blog/">Blog</a>
+    <a href="/contact/">Contact</a>
+  </nav>
+</div>
+
+<main id="main-content">
+  <section class="home-hero container">
+    <div class="hero-text">
+      <h1>Lampros Ch</h1>
+      <p>Audio engineer, researcher, and educator based in Barcelona. I create immersive sound experiences and teach practical music lessons.</p>
+    </div>
+    <div class="hero-cta">
+      <a class="btn" href="/lessons/">Book a lesson</a>
+    </div>
+  </section>
+
+  <section class="featured-section container">
+    <h2>Featured</h2>
+    <ul class="featured-list">
+      <li><strong>Portfolio:</strong> <a href="/portfolio/project-1">Spatial audio experiment</a></li>
+      <li><strong>Technical:</strong> <a href="/technical/paper-1">Listener envelopment study</a></li>
+      <li><strong>Lessons:</strong> <a href="/lessons/">Guitar & Music Theory Lessons</a></li>
+    </ul>
+  </section>
+
+  <section class="container">
+    <div class="section-grid">
+      <a class="section-card" href="/portfolio/">
+        <div>
+          <strong>Portfolio</strong>
+          <small>Creative work and recordings</small>
+        </div>
+      </a>
+      <a class="section-card" href="/technical/">
+        <div>
+          <strong>Technical</strong>
+          <small>Research and experiments</small>
+        </div>
+      </a>
+      <a class="section-card" href="/lessons/">
+        <div>
+          <strong>Lessons</strong>
+          <small>Guitar and theory</small>
+        </div>
+      </a>
+      <a class="section-card" href="/blog/">
+        <div>
+          <strong>Blog</strong>
+          <small>Notes and articles</small>
+        </div>
+      </a>
+    </div>
+  </section>
+</main>
 
   <footer role="contentinfo">
     <p>&copy; {{ site.author.name }} — {{ set.time | date: "%Y" }}</p>
