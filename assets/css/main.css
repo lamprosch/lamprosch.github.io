@@ -44,6 +44,69 @@ nav a{margin-right:.75rem}
   z-index:1000;
 }
 
+/* Fixed navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  padding: .75rem 1rem;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  gap: 1rem;
+  z-index: 100;
+}
+
+/* Section grid */
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.section-card {
+  display: block;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  text-align: center;
+  background: #fafafa;
+  transition: background .2s;
+}
+
+.section-card:hover {
+  background: #f0f0f0;
+}
+
+/* Lesson form */
+.lesson-form {
+  display: grid;
+  gap: 1rem;
+  max-width: 500px;
+}
+
+.lesson-form input,
+.lesson-form select,
+.lesson-form textarea {
+  width: 100%;
+  padding: .5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.lesson-form button {
+  padding: .6rem 1rem;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.lesson-form button:hover {
+  background: #555;
+}
+
 .project img{max-width:100%; height:auto; display:block; margin: .5rem 0}
 ul{padding-left:1.25rem}
 .meta{color:var(--muted); font-size:.95rem}
