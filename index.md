@@ -1,66 +1,30 @@
 ---
-
 layout: default
-
 title: Home
-
 ---
 
+# Lampros Ch
 
+Audio engineer, researcher, and educator based in Barcelona.  
+I create immersive sound experiences and help students grow through clear, practical music lessons.
 
-\# Welcome
+## Featured
 
+### Portfolio
+{% assign featured_portfolio = site.portfolio | first %}
+- [{{ featured_portfolio.title }}]({{ featured_portfolio.url | relative_url }})
 
+### Technical
+{% assign featured_technical = site.technical | first %}
+- [{{ featured_technical.title }}]({{ featured_technical.url | relative_url }})
 
-\## Portfolio
+### Lessons
+- [Guitar & Music Theory Lessons](/lessons/)
 
-<ul>
-
-{% for item in site.portfolio %}
-
-&nbsp; <li>
-
-&nbsp;   <a href="{{ item.url | relative\_url }}">{{ item.title }}</a>
-
-&nbsp;   — <small>{{ item.excerpt }}</small>
-
-&nbsp; </li>
-
-{% endfor %}
-
-</ul>
-
-
-
-\## Technical
-
-<ul>
-
-{% for item in site.technical %}
-
-&nbsp; <li>
-
-&nbsp;   <a href="{{ item.url | relative\_url }}">{{ item.title }}</a>
-
-&nbsp;   — <small>{{ item.excerpt }}</small>
-
-&nbsp; </li>
-
-{% endfor %}
-
-</ul>
-
-
-
-\## Latest posts
-
-<ul>
-
-{% for post in site.posts limit:5 %}
-
-&nbsp; <li><a href="{{ post.url | relative\_url }}">{{ post.title }}</a> — <small>{{ post.date | date: "%Y-%m-%d" }}</small></li>
-
-{% endfor %}
-
-</ul>
-
+## Explore
+<div class="section-grid">
+  <a class="section-card" href="/portfolio/">Portfolio</a>
+  <a class="section-card" href="/technical/">Technical</a>
+  <a class="section-card" href="/lessons/">Lessons</a>
+  <a class="section-card" href="/blog/">Blog</a>
+</div>
