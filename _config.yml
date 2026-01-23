@@ -14,8 +14,13 @@ plugins: [] # keep empty for GitHub Pages safe mode
 collections:
   portfolio:
     output: true
+    permalink: /portfolio/:name/
+  blog:
+    output: true
+    permalink: /blog/:name/
   technical:
     output: true
+    permalink: /technical/:name/
 
 # Defaults for posts and collections
 defaults:
@@ -42,7 +47,7 @@ exclude:
   - .github
 
 # Permalinks
-permalink: /:categories/:year/:month/:day/:title/
+# permalink: /:categories/:year/:month/:day/:title/
 
 # Author (used in templates)
 author:

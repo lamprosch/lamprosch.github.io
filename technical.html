@@ -1,0 +1,24 @@
+---
+layout: default
+title: Technical
+---
+
+<h1>Technical Work</h1>
+<p class="meta">Research, DSP experiments, plugin development, and acoustics.</p>
+
+<div class="tech-list">
+  {% for item in site.technical %}
+    <a class="tech-card" href="{{ item.url | relative_url }}">
+      <h3>{{ item.title }}</h3>
+
+      <p class="meta">
+        {{ item.date | date: "%B %d, %Y" }}
+        {% if item.tags %}
+          — {{ item.tags | join: ", " }}
+        {% endif %}
+      </p>
+
+      <p class="excerpt">{{ item.excerpt }}</p>
+    </a>
+  {% endfor %}
+</div>

@@ -1,0 +1,23 @@
+---
+layout: default
+title: Portfolio
+---
+
+<h1>Portfolio</h1>
+<p class="meta">Selected works in production, mixing, and audio engineering.</p>
+
+<div class="portfolio-grid">
+  {% for item in site.portfolio %}
+    <a class="portfolio-card" href="{{ item.url | relative_url }}">
+      <div class="portfolio-image">
+        <img src="{{ item.artwork | relative_url }}" alt="{{ item.title }}">
+      </div>
+
+      <div class="portfolio-overlay">
+        <h3>{{ item.artist }}</h3>
+        <p class="project-title">{{ item.title }}</p>
+        <p class="project-role">{{ item.role }}</p>
+      </div>
+    </a>
+  {% endfor %}
+</div>

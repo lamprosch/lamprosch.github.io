@@ -1,0 +1,21 @@
+---
+layout: default
+title: Blog
+---
+
+<h1>Blog</h1>
+<p class="meta">Thoughts, notes, and updates on audio, creativity, and learning.</p>
+
+<div class="blog-list">
+  {% for post in site.blog %}
+    <a class="blog-card" href="{{ post.url | relative_url }}">
+      <img class="blog-thumb" src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+
+      <div class="blog-info">
+        <h3>{{ post.title }}</h3>
+        <p class="meta">{{ post.date | date: "%B %d, %Y" }}</p>
+        <p class="excerpt">{{ post.excerpt }}</p>
+      </div>
+    </a>
+  {% endfor %}
+</div>
