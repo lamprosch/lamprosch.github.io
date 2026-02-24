@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+<div class="navbar-wrap">
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <a class="brand" href="/">Home</a>
+    <a href="/portfolio/">Portfolio</a>
+    <a href="/technical/">Technical</a>
+    <a href="/lessons/">Lessons</a>
+    <a href="/blog/">Blog</a>
+    <a href="/contact/">Contact</a>
+  </nav>
+</div>
+
+<main id="main-content">
+  <section class="home-hero container">
+    <div class="hero-text">
+      <h1>Lampros Chantzis</h1>
+      <p>Audio engineer, researcher, and educator based in Barcelona. I create immersive sound experiences and teach practical music lessons.</p>
+    </div>
+    <div class="hero-cta">
+      <a class="btn" href="/lessons/">Book a lesson</a>
+    </div>
+  </section>
+
+  <section class="featured-section container">
+    <h2>Featured</h2>
+    <ul class="featured-list">
+      {% if site.portfolio.size > 0 %}
+        <li><strong>Portfolio:</strong> <a href="{{ site.portfolio | first | relative_url }}">{{ site.portfolio | first.title }}</a></li>
+      {% endif %}
+      {% if site.technical.size > 0 %}
+        <li><strong>Technical:</strong> <a href="{{ site.technical | first | relative_url }}">{{ site.technical | first.title }}</a></li>
+      {% endif %}
+      {% if site.posts.size > 0 %}
+        <li><strong>Latest Post:</strong> <a href="{{ site.posts | first | relative_url }}">{{ site.posts | first.title }}</a></li>
+      {% endif %}
+    </ul>
+  </section>
+
+  <section class="container">
+    <div class="section-grid">
+      <a class="section-card" href="/portfolio/">
+        <div>
+          <strong>Portfolio</strong>
+          <small>Creative work and recordings</small>
+        </div>
+      </a>
+      <a class="section-card" href="/technical/">
+        <div>
+          <strong>Technical</strong>
+          <small>Research and experiments</small>
+        </div>
+      </a>
+      <a class="section-card" href="/blog/">
+        <div>
+          <strong>Blog</strong>
+          <small>Latest articles and notes</small>
+        </div>
+      </a>
+      <a class="section-card" href="/lessons/">
+        <div>
+          <strong>Lessons</strong>
+          <small>Guitar and theory</small>
+        </div>
+      </a>
+    </div>
+  </section>
+</main>
+
+  <footer role="contentinfo">
+    <p>&copy; {{ site.author.name }} — {{ site.time | date: "%Y" }}</p>
+  </footer>
+</body>
+</html>

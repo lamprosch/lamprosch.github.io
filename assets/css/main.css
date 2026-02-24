@@ -431,3 +431,60 @@ footer{margin-top:var(--space-xl); padding:var(--space-lg) 0; color:var(--muted)
   color: var(--muted);
   font-size: .95rem;
 }
+
+/* --- SECTION LAYOUT --- */
+section {
+  margin-bottom: var(--space-xl);
+}
+
+section h2 {
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space);
+}
+
+/* Hero section on lessons page */
+.home-hero ul {
+  list-style: none;
+  padding: 0;
+}
+
+.home-hero ul li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.home-hero ul li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+/* Form improvements */
+form {
+  background: #fafafa;
+  padding: var(--space-lg);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.form-row > div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Social links */
+a.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  section {
+    margin-bottom: var(--space-lg);
+  }
+}
