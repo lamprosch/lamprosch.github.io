@@ -14,7 +14,7 @@
 
 <div class="navbar-wrap">
   <nav class="navbar" role="navigation" aria-label="Main navigation">
-    <a class="brand" href="/">Lampros Chantzis</a>
+    <a class="brand" href="/">Home</a>
     <a href="/portfolio/">Portfolio</a>
     <a href="/technical/">Technical</a>
     <a href="/lessons/">Lessons</a>
@@ -26,7 +26,7 @@
 <main id="main-content">
   <section class="home-hero container">
     <div class="hero-text">
-      <h1>Lampros Ch</h1>
+      <h1>Lampros Chantzis</h1>
       <p>Audio engineer, researcher, and educator based in Barcelona. I create immersive sound experiences and teach practical music lessons.</p>
     </div>
     <div class="hero-cta">
@@ -37,9 +37,15 @@
   <section class="featured-section container">
     <h2>Featured</h2>
     <ul class="featured-list">
-      <li><strong>Portfolio:</strong> <a href="/portfolio/project-1">Spatial audio experiment</a></li>
-      <li><strong>Technical:</strong> <a href="/technical/paper-1">Listener envelopment study</a></li>
-      <li><strong>Lessons:</strong> <a href="/lessons/">Guitar & Music Theory Lessons</a></li>
+      {% if site.portfolio.size > 0 %}
+        <li><strong>Portfolio:</strong> <a href="{{ site.portfolio | first | relative_url }}">{{ site.portfolio | first.title }}</a></li>
+      {% endif %}
+      {% if site.technical.size > 0 %}
+        <li><strong>Technical:</strong> <a href="{{ site.technical | first | relative_url }}">{{ site.technical | first.title }}</a></li>
+      {% endif %}
+      {% if site.posts.size > 0 %}
+        <li><strong>Latest Post:</strong> <a href="{{ site.posts | first | relative_url }}">{{ site.posts | first.title }}</a></li>
+      {% endif %}
     </ul>
   </section>
 
@@ -57,16 +63,16 @@
           <small>Research and experiments</small>
         </div>
       </a>
+      <a class="section-card" href="/blog/">
+        <div>
+          <strong>Blog</strong>
+          <small>Latest articles and notes</small>
+        </div>
+      </a>
       <a class="section-card" href="/lessons/">
         <div>
           <strong>Lessons</strong>
           <small>Guitar and theory</small>
-        </div>
-      </a>
-      <a class="section-card" href="/blog/">
-        <div>
-          <strong>Blog</strong>
-          <small>Notes and articles</small>
         </div>
       </a>
     </div>
