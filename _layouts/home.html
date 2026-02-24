@@ -29,24 +29,6 @@
       <h1>Lampros Chantzis</h1>
       <p>Audio engineer, researcher, and educator based in Barcelona. I create immersive sound experiences and teach practical music lessons.</p>
     </div>
-    <div class="hero-cta">
-      <a class="btn" href="/lessons/">Book a lesson</a>
-    </div>
-  </section>
-
-  <section class="featured-section container">
-    <h2>Featured</h2>
-    <ul class="featured-list">
-      {% if site.portfolio.size > 0 %}
-        <li><strong>Portfolio:</strong> <a href="{{ site.portfolio | first | relative_url }}">{{ site.portfolio | first.title }}</a></li>
-      {% endif %}
-      {% if site.technical.size > 0 %}
-        <li><strong>Technical:</strong> <a href="{{ site.technical | first | relative_url }}">{{ site.technical | first.title }}</a></li>
-      {% endif %}
-      {% if site.posts.size > 0 %}
-        <li><strong>Latest Post:</strong> <a href="{{ site.posts | first | relative_url }}">{{ site.posts | first.title }}</a></li>
-      {% endif %}
-    </ul>
   </section>
 
   <section class="container">
