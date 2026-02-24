@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Guitar & Music Theory Lessons
+permalink: /lessons/
 ---
 
 # Guitar & Music Theory Lessons
