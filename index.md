@@ -1,8 +1,4 @@
 ---
-layout: default
+layout: home
 title: Home
 ---
-
-# Welcome
-
-Discover my portfolio, technical work, and educational resources below.
