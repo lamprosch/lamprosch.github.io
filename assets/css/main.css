@@ -49,10 +49,11 @@ body{
   background:var(--bg);
   color:var(--text);
   font-family:var(--font-body);
+  font-weight:300;
   line-height:1.75;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
-  font-size:clamp(16px, 1.6vw, 18px);
+  font-size:clamp(14px, 1.4vw, 16px);
   padding-bottom: var(--space-xl);
 }
 
@@ -64,9 +65,9 @@ h1,h2,h3,h4{
   line-height:1.15;
   letter-spacing:-0.2px;
 }
-h1{font-size:clamp(28px, 4.2vw, 44px)}
-h2{font-size:clamp(20px, 2.6vw, 28px)}
-h3{font-size:clamp(18px, 2.2vw, 20px)}
+h1{font-size:clamp(24px, 3.5vw, 36px)}
+h2{font-size:clamp(18px, 2.2vw, 24px)}
+h3{font-size:clamp(16px, 1.8vw, 20px)}
 
 /* Links */
 a{color:var(--accent); text-decoration:underline; text-underline-offset:3px}
@@ -95,7 +96,7 @@ header, main, footer{max-width:var(--content-width); margin:0 auto; padding:0 va
   align-items:center;
   padding:.6rem .9rem;
   background:var(--navbar-bg);
-  border-radius:0 0 var(--radius) var(--radius);
+  border-radius:var(--radius);
   box-shadow: var(--shadow-subtle);
   max-width:var(--content-width);
   width:100%;
@@ -196,7 +197,7 @@ header, main, footer{max-width:var(--content-width); margin:0 auto; padding:0 va
 .card .meta{color:var(--muted); font-size:.95rem; margin-bottom:.5rem}
 
 /* 8. Forms (modern, accessible) */
-form{max-width:640px}
+form{max-width:640px; margin:0 auto}
 label{display:block; font-weight:600; margin-bottom:.35rem; color:var(--text)}
 .input, input[type="text"], input[type="email"], select, textarea{
   width:100%;
