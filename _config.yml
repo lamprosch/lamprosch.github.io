@@ -15,9 +15,6 @@ collections:
   portfolio:
     output: true
     permalink: /portfolio/:name/
-  blog:
-    output: true
-    permalink: /blog/:name/
   technical:
     output: true
     permalink: /technical/:name/

@@ -7,7 +7,7 @@ title: Blog
 <p class="meta">Thoughts, notes, and updates on audio, creativity, and learning.</p>
 
 <div class="blog-list">
-  {% for post in site.blog %}
+  {% for post in site.posts %}
     <a class="blog-card" href="{{ post.url | relative_url }}">
       <img class="blog-thumb" src="{{ post.image | relative_url }}" alt="{{ post.title }}">
 
