@@ -8,7 +8,7 @@ date: 2026-01-20
 
 author: Lampros
 
-tags: \[thesis, research, audio]
+tags: [thesis, research, audio]
 
 excerpt: "Summary of my thesis on listener envelopment metrics and perceptual evaluation."
 
@@ -18,7 +18,7 @@ pdf: /assets/technical/thesis.pdf
 
 
 
-\*\*Abstract\*\*
+**Abstract**
 
 
 
@@ -26,7 +26,7 @@ This page summarizes my thesis on listener envelopment analysis, covering method
 
 
 
-\*\*Download\*\*
+**Download**
 
 
 
